@@ -53,6 +53,7 @@ def code_demo(username, password, image, typeid):
     resp = urllib2.urlopen(req)
     # 获得结果
     qrcont = json.loads(resp.read())
+
     try:
         return qrcont['Result']
     except:
